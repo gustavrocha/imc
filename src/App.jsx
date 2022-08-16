@@ -41,6 +41,23 @@ class Imc extends React.Component {
     }
   }
 
+  
+tipo(imc, a, b, c, d ,e) {
+  if (imc < a) {
+    return "Abaixo do peso";
+    } else if (imc < b) {
+    return "Peso normal";
+    } else if (imc < c) {
+    return "Acima do peso (sobrepeso)";
+    } else if (imc < d) {
+    return "Obesidade I";
+    } else if (imc < e) {
+    return "Obesidade II";
+    } else {
+    return  "Obesidade III";
+  }
+}
+     
   resultado() {
     let resultado = new String();
     let imc = this.calcular();
